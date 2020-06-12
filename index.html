@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="banner" id="banner">
+    <h2 id="form-title">Weather Data</h2>
+    <div class="container">
+    <form action="" name="weatherData" id="weatherData">
+        <div class="form-group">
+        <label for="Country">Enter Country (lower case)</label>
+        <input type="text" name="country" class="form-control" placeholder="Country">
+
+    </div>
+    <div class="form-group">
+        <label for="Zip Code">Enter Zip Code</label>
+        <input type="text" name="zip" class="form-control" placeholder="Zip Code">
+    </div>
+    <button id="submitButton" class="btn btn-primary" onClick="event.preventDefault(); getJSON()">Submit</button>
+    </form>
+    <table class="table table-dark">
+        <tr>
+            <th>High</th>
+            <th>Low</th>
+            <th>Forecast</th>
+            <th>Humidity</th>
+        </tr>
+        <tr>
+            <td id="temphigh"></td>
+            <td id="templow"></td>
+            <td id="forecast"></td>
+            <td id="humidity"></td>
+        </tr>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
