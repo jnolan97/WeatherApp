@@ -22,18 +22,18 @@ async function getJSON() {
                 document.getElementById('templow').style.backgroundColor = "#00FFFF"
             }
             document.getElementById('templow').innerHTML = convert_low
-            let forecast = rawData.main.temp
-            let convert_forecast = convertTemp(forecast)
-            if(convert_forecast > 80){
-                document.getElementById('forecast').style.backgroundColor = "#8B0000"
+            let temp = rawData.main.temp
+            let convert_temp = convertTemp(temp)
+            if(convert_temp > 80){
+                document.getElementById('temp').style.backgroundColor = "#8B0000"
             } else {
-                document.getElementById('forecast').style.backgroundColor = "#007bff"
+                document.getElementById('temp').style.backgroundColor = "#007bff"
             }
-            document.getElementById('forecast').innerHTML = convert_forecast
+            document.getElementById('temp').innerHTML = convert_temp
             let humidity = rawData.main.humidity
             document.getElementById('humidity').innerHTML = humidity
             document.getElementById('humidity').style.backgroundColor = "#ffc107"
-            if(convert_forecast > 75){
+            if(convert_temp > 75){
            // var dom = document.getElementById('banner')
             document.body.style.backgroundColor = "#8B0000";
             } else{
